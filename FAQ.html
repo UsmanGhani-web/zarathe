@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Acme&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Hanunoo&family=Oswald:wght@200..700&family=Pacifico&display=swap"
+    rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+
+    }
+
+    .navbar {
+      display: flex;
+      font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 1px solid #559288;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .onenav a{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #559288;
+      margin-left: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+
+    }
+
+    sub {
+      font-size: small;
+      font-style: italic;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+
+    }
+
+    .together {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(93, 92, 92, 0.963);
+      font-size: 1rem;
+    }
+
+    .nav-links a:not(.login-btn):not(.getstarted-btn):hover {
+      border-bottom: 4px solid #559288;
+      padding-bottom: 20px;
+    }
+
+    .login-btn,
+    .getstarted-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      border: 2px solid #559288;
+      color: #559288;
+    }
+
+    .login-btn:hover {
+      background-color: #5592885f;
+    }
+
+    .getstarted-btn {
+      background-color: #5592885f;
+      border: none;
+
+    }
+
+    .getstarted-btn:hover {
+      background-color: #559288;
+      color: white;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        font-size: small;
+        top: 57px;
+        right: 0;
+        left: 30px;
+        background-color: white;
+        border-top: 1px solid #559288;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+
+      }
+
+      .menu-icon {
+        display: block;
+        font-size: small;
+      }
+
+      .onenav {
+        font-size: small;
+
+      }
+
+      sub {
+        font-size: smaller;
+      }
+
+      .logo {
+        height: 40px;
+
+      }
+
+      .login-btn {
+        margin-top: 5px;
+        margin-left: -10px;
+      }
+
+      .getstarted-btn {
+        margin-top: 10px;
+        margin-left: -10px;
+
+      }
+
+
+    }
+
+    .faq-container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+    }
+
+    .faq-title {
+      text-align: center;
+      margin-bottom: 45px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .faq-question {
+      padding: 15px;
+      cursor: pointer;
+      font-size: larger;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: #f0f0f0;
+
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      font-weight: lighter;
+      background: #fafafa;
+      transition: max-height 1s ease;
+      font-size: larger;
+    }
+
+    .faq-answer.open {
+      padding: 15px;
+      max-height: 300px;
+    }
+
+    .faq-question::after {
+      content: "↓";
+      position: absolute;
+      right: 20px;
+      font-size: 20px;
+      transition: transform 0.1s ease;
+    }
+
+    .faq-question.active::after {
+      content: "↑";
+    }
+
+    .ready {
+      text-align: center;
+      font-size: xx-large;
+      margin-top: 20px;
+      font-weight: lighter;
+      color: #559288;
+    }
+
+    .matched {
+      color: white;
+      background-color: #559288;
+      border: none;
+      border-radius: 30px;
+      width: 280px;
+      height: 50px;
+      margin-top: 20px;
+      font-size: larger;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .matched:hover {
+      color: #559288;
+      background-color: #5592885f;
+
+    }
+
+    #hoja {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .big-footer {
+      background: linear-gradient(to top, #559288a4, #f6fbfb);
+      padding: 60px 20px 30px;
+      font-family: 'Segoe UI', sans-serif;
+      margin-bottom: -10px;
+      color: #2e3d49;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .footer-col-brand {
+      color: #559288;
+      font-family: "Montserrat", sans-serif;
+      margin-left: 20px;
+    }
+
+    sub {
+      font-size: small;
+      font-style: italic;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    .mqm {
+      color: black;
+    }
+
+    .footer-col {
+      flex: 1 1 200px;
+      min-width: 220px;
+      font-family: "Nunito", sans-serif;
+      color: black;
+    }
+
+    .footer-col h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #559288;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+      font-size: small;
+      color: black;
+    }
+
+    .footer-col a {
+      color: #3d5a80;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ee6c4d;
+    }
+
+    .brand h2 {
+      font-size: 32px;
+      color: #2b7a78;
+      margin-bottom: 10px;
+    }
+
+    .brand p {
+      max-width: 300px;
+      line-height: 1.6;
+    }
+
+    .para {
+      font-size: small;
+    }
+
+    .contact p {
+      margin-bottom: 8px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 18px;
+      border: none;
+      background-color: #559288;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .social-icon {
+      margin-top: 10px;
+      font-size: large;
+      margin-left: 200px;
+    }
+
+    .social-icons a {
+      color: #3d5a80;
+      font-size: larger;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid black;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    #moon {
+      margin-left: 1000px;
+      margin-bottom: 10px;
+    }
+
+    #star {
+      margin-left: 30px;
+    }
+
+    #earth {
+      margin-left: 30px;
+    }
+
+    #sun {
+      margin-left: 30px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+
+    @media (max-width: 1024px) {
+      .footer-container {
+        justify-content: space-evenly;
+      }
+
+      .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-col {
+        min-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .newsletter input[type="email"] {
+        width: 100%;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      #moon,
+      #star,
+      #earth,
+      #sun {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-col h3 {
+        font-size: 18px;
+      }
+
+      .footer-bottom p {
+        font-size: 12px;
+      }
+
+      .newsletter input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .footer-container {
+        gap: 20px;
+      }
+
+      .matched {
+        font-size: small;
+        width: 200px;
+        height: 30px;
+        text-align: center;
+      }
+
+      .faq-question {
+        font-size: small;
+      }
+
+      .faq-answer {
+        font-size: small;
+      }
+
+      .ready {
+        font-size: medium;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="together">
+      <img src="logohere.png" alt="Logo" class="logo" />
+      <div class="onenav">
+      <a href="index.html" style="text-decoration: none;">ZARA
+        <sub>t</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub></a>
+       </div>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()"style="font-size:18px;font-weight:bold;">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="advice.html">Advice</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="get.html" class="getstarted-btn">Get Started</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="faq-container">
+    <div class="faq-title">Frequently Asked Questions</div>
+
+
+    <div class="faq-item">
+      <div class="faq-question">What is ZARA Therapist?</div>
+      <div class="faq-answer">ZARA Therapist is the largest therapy platform in the world and it's 100% online. We change
+        the way people approach their mental health and help them tackle life's challenges by providing accessible and
+        affordable care. With ZARA Therapist, you can message a professional therapist anytime, anywhere.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Who will be helping me?</div>
+      <div class="faq-answer">After you sign up, we will match you to an available therapist who fits your objectives,
+        preferences, and the type of issues you are dealing with. If you feel your therapist isn't a good fit for you,
+        you may elect to be matched to a different therapist.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How much does it cost?
+      </div>
+      <div class="faq-answer">The cost of therapy through ZARA Therapist ranges from $70 to $100 per week (billed every 4
+        weeks), and it is based on your location, source, preferences, and therapist availability. You can cancel your
+        membership at any time, for any reason.</div>
+    </div>
+
+
+    <div class="faq-item">
+      <div class="faq-question">What is therapy and how does it help?</div>
+      <div class="faq-answer">Therapy is a process where a trained professional helps you understand and deal with your
+        thoughts, feelings, and behaviors.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does each session last?</div>
+      <div class="faq-answer">Typically, each session lasts around 50 minutes to an hour depending on the therapist's
+        approach.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is everything I say confidential?</div>
+      <div class="faq-answer">Yes, all sessions are private and confidential, unless there is a risk of harm to you or
+        others.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I cancel or reschedule an appointment?</div>
+      <div class="faq-answer">Yes, but please try to inform us at least 24 hours in advance to avoid cancellation
+        charges.</div>
+    </div>
+
+
+    <div class="faq-item">
+      <div class="faq-question">How are the therapists verified?</div>
+      <div class="faq-answer">Providers are required to provide proper documentation and undergo a thorough verification
+        process, including case study review and background checks.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is ZARA Therapist right for me?</div>
+      <div class="faq-answer">ZARA Therapist may be right for you if you're looking to improve the quality of your life.
+        Whenever there is anything that interferes with your happiness or prevents you from achieving your goals, we may
+        be able to help. We also have therapists who specialize in specific issues such as stress, anxiety,
+        relationships,
+        parenting, depression, addictions, eating, sleeping, trauma, anger, family conflicts, LGBT matters, grief,
+        religion, self esteem, and more.</div>
+    </div>
+
+
+    <div class="faq-item">
+      <div class="faq-question">Can ZARA Therapist substitute for traditional face-to-face therapy?</div>
+      <div class="faq-answer">The professionals who work through BetterHelp are registered therapists who hold the
+        proper
+        credentials to provide therapy. However, while the service may have similar benefits, it's not capable of
+        substituting for traditional face-to-face therapy in every case. Please note that your therapist won't be able
+        to
+        make any official diagnosis, to fulfill any court order or prescribe medication.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long until I'm matched with a therapist?</div>
+      <div class="faq-answer">The matching process can take a few hours or a few days, depending on therapist
+        availability.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How does messaging work?</div>
+      <div class="faq-answer">You can message your therapist at any time. Your therapist will read and respond to
+        your
+        messages with insights and guidance. Messages are not in real-time, so no scheduling is required.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do live chat sessions work?</div>
+      <div class="faq-answer">Schedule a time, log in, and start typing to chat live with your therapist in real-time.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do live audio sessions work?</div>
+      <div class="faq-answer">Audio sessions are a great way to conveniently speak with your therapist by simply using
+        your landline or cell phone, no matter where you are.
+
+        To talk with your therapist over the phone, you will need to schedule a time with your therapist and log in to
+        your Therapy tab at that time. The therapist will prompt you to start the audio session and the system will ask
+        you for your phone number. The system will then call you at that number and connect you with your therapist to
+        start the audio session. Please note that the phone number you enter will not be shared with the therapist.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do live video sessions work?</div>
+      <div class="faq-answer">You will schedule a time, and at that time, log in and start the video session prompted by
+        your therapist, similar to Zoom or FaceTime.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I go back and read the therapist's <br>previous messages?</div>
+      <div class="faq-answer">Yes, you can log in anytime and review previous messages from your therapist for
+        reflection.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long can I use BetterHelp?</div>
+      <div class="faq-answer">This depends on your needs and varies a lot from one person to another. Some people feel
+        they get most of the value after just a few weeks, while others prefer to stick to the program for an extended
+        period of time. This is completely up to you.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How will I pay for my ZARA Therapist membership?</div>
+      <div class="faq-answer">You can use credit card, debit card, PayPal, Apple Pay, or Google Pay to set up recurring
+        membership payments. If you achieve your goals or no longer find therapy with ZARA Therapist beneficial, you can
+        cancel your subscription at any time.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What is the role of zaratherapist.com?</div>
+      <div class="faq-answer">The service is provided by independent providers who work directly with you. These
+        providers are not employees of ZARA Therapist and the site doesn't oversee them professionally. Our mission is to
+        build, maintain, and support a platform that lets users and therapists communicate effectively, and to
+        facilitate this channel so they can get the most out of their interaction.</div>
+    </div>
+
+
+    <div class="faq-item">
+      <div class="faq-question">How can I be sure this is an effective form of <br> therapy?</div>
+      <div class="faq-answer">There are many studies that confirm the effectiveness of the online medium for making life
+        changes. For example, a study published by JMIR Publications and conducted by researchers from University of
+        California - Berkeley, University of California - San Francisco, and the San Francisco General Hospital
+        concluded that "users of BetterHelp experienced significantly reduced depression symptom severity after engaging
+        with the platform.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can I stay anonymous?</div>
+      <div class="faq-answer">When you sign up we do not ask you for your full name or contact information but rather a
+        "nickname" created by you that will be used to identify you in the system. When you decide to start the therapy
+        process, we will ask you for your contact information for emergency situations, such as if your therapist
+        believes that you or someone else might be in danger. Your therapist may also request additional information
+        about you when it is required by their respective organization guidelines. All of this data is protected by the
+        confidentiality requirements of the therapist’s organization, similar to in-office therapy.
+
+        For additional information about how ZARA Therapist helps protect your privacy, please review our <a href="">Privacy
+          Policy</a>.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How will I pay for my ZARA Therapist membership?</div>
+      <div class="faq-answer">You can use credit card, debit card, PayPal, Apple Pay, or Google Pay to set up recurring
+        membership payments. If you achieve your goals or no longer find therapy with Therapist beneficial, you can
+        cancel your subscription at any time.</div>
+    </div>
+  </div>
+
+  <div class="ready">
+    Ready to get started?
+  </div>
+  <button class="matched" onclick=" window.location.href='get.html'">
+    Get matched with a therapist
+  </button>
+
+
+  <footer class="big-footer">
+    <div class="footer-container">
+      <div class="footer-col-brand">
+        <h2 style="color:#559288;; font-weight: bold;">ZARA
+          <sub>T</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub>
+        </h2>
+        <p class="mqm">Where understanding meets transformation.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="advice.html">Advics</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal and Accessibility Information</h3>
+        <ul>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li><a href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="success.html">Sharing Settings</a></li>
+          <li><a href="webaccessibility.html">Web Accessibility</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact">
+        <h3>Contact</h3>
+        <p class="para">Email: zara@therapist.com</p>
+        <p class="para">Phone: +123 456 7890</p>
+        <p class="para">Location: Online & In-Person</p>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Stay Connected</h3>
+        <p>Join our newsletter for mental wellness tips.</p>
+        <form>
+          <input type="email" placeholder="Your email">
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" id="moon"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram" id="star"></i></a>
+          <a href="https://www.x.com/"><i class="fab fa-twitter" id="sun"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" id="earth"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 ZARA Therapist. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+
+        questions.forEach(item => {
+          if (item !== q) {
+            item.nextElementSibling.classList.remove('open');
+          }
+        });
+
+
+        q.classList.toggle('active');
+        q.nextElementSibling.classList.toggle('open');
+      });
+    });
+
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

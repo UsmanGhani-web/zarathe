@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #559288;
+    color: white;
+  }
+  
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #5592885f;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    border: 1px solid #4e7a61;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #35694c;
+  }
+  
+  .tick {
+    color: #7efaa0;
+    font-size: 20px;
+  }
+  
+  .cross {
+    color: #ff6c6c;
+    font-size: 20px;
+  }
+  
+  .quote, .testimonial {
+    text-align: center;
+    transition: all 1s ease-in-out;
+    opacity: 1;
+  }
+  
+  .quote {
+    margin-top: 40px;
+    font-size: 18px;
+    font-style: italic;
+    min-height: 60px;
+  }
+  
+  .testimonial {
+    margin: 30px 0;
+  }
+  
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .dots {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #7efaa0;
+  }
+  
+  .btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #204b36;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    table, th, td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .testimonial img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }

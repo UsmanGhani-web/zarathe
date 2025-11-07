@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 1px solid #559288;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .onenav {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #559288;
+      margin-left: 10px;
+    }
+
+    sub {
+      font-size: small;
+    }
+
+    .together {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(93, 92, 92, 0.963);
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 4px solid #559288;
+      padding-bottom: 4px;
+    }
+
+    .login-btn,
+    .getstarted-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      border: 2px solid #559288;
+      color: #559288;
+    }
+
+    .login-btn:hover {
+      background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    .getstarted-btn {
+      background-color: #5592885f;
+      border: none;
+      color: white;
+    }
+
+    .getstarted-btn:hover {
+      background-color: #559288;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 54px;
+        right: 0;
+        left: 30px;
+        background-color: white;
+        border-top: 1px solid #559288;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+        font-size: small;
+      }
+
+      .onenav {
+        font-size: small;
+        margin-left: 45px;
+      }
+
+      sub {
+        font-size: smaller;
+      }
+
+      .logo {
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="together">
+      <img src="logohere (1).png" alt="Logo" class="logo" />
+      <div class="onenav">
+        ZARA
+        <sub>t</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub>
+      </div>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="">About</a></li>
+      <li><a href="">Advice</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="">Therapist jobs</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="" class="login-btn">Login</a></li>
+      <li><a href="get.html" class="getstarted-btn">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>

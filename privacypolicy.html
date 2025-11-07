@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+    
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 1px solid #559288;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .onenav a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #559288;
+      margin-left: 10px;
+    }
+
+    sub {
+      font-size: small;
+    }
+
+    .together {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(93, 92, 92, 0.963);
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 4px solid #559288;
+      padding-bottom: 4px;
+    }
+
+    .login-btn,
+    .getstarted-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      border: 2px solid #559288;
+      color: #559288;
+    }
+
+    .login-btn:hover {
+      background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    .getstarted-btn {
+      background-color: #5592885f;
+      border: none;
+      color: white;
+    }
+
+    .getstarted-btn:hover {
+      background-color: #559288;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 54px;
+        right: 0;
+        left: 30px;
+        background-color: white;
+        border-top: 1px solid #559288;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+        font-size: small;
+      }
+
+      .onenav {
+        font-size: small;
+        margin-left: 45px;
+      }
+
+      sub {
+        font-size: smaller;
+      }
+
+      .logo {
+        height: 40px;
+      }
+    }
+    
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      background: #559288;
+      color: white;
+      padding: 20px;
+      margin: 0;
+      font-size: 50px;
+      width: 100%;
+    }
+
+    .intro {
+      max-width: 900px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .intro p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .intro strong {
+      display: block;
+      margin-top: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .section-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+      max-width: 1200px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      transition: transform 0.2s ease;
+      border-top: 6px solid #559288;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h2 {
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 0;
+      color: #333;
+      padding-left: 50px;
+      font-size: 18px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #5592885f;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        width: 45%;
+      }
+    }
+
+
+    
+         .big-footer {
+            background: linear-gradient(to top, #559288a4, #f6fbfb);
+            padding: 60px 20px 30px;
+            font-family: 'Segoe UI', sans-serif;
+            margin-bottom: -10px;
+            color: #2e3d49;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border: 2px solid #559288;
+            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .footer-col-brand {
+            color: #559288;
+            font-family: "Montserrat", sans-serif;
+            margin-left: 20px;
+        }
+
+        sub {
+            font-size: small;
+            font-style: italic;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+        }
+
+        .mqm {
+            color: black;
+        }
+
+        .footer-col {
+            flex: 1 1 200px;
+            min-width: 220px;
+            font-family: "Nunito", sans-serif;
+            color: black;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #559288;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+            font-size: small;
+            color: black;
+        }
+
+        .footer-col a {
+            color: #3d5a80;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: #ee6c4d;
+        }
+
+        .brand h2 {
+            font-size: 32px;
+            color: #2b7a78;
+            margin-bottom: 10px;
+        }
+
+        .brand p {
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .para {
+            font-size: small;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 18px;
+            border: none;
+            background-color: #559288;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .social-icon {
+            margin-top: 10px;
+            font-size: large;
+            margin-left: 200px;
+        }
+
+        .social-icons a {
+            color: #3d5a80;
+            font-size: larger;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid black;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #moon {
+            margin-left: 1000px;
+            margin-bottom: 10px;
+        }
+
+        #star {
+            margin-left: 30px;
+        }
+
+        #earth {
+            margin-left: 30px;
+        }
+
+        #sun {
+            margin-left: 30px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 1024px) {
+            .footer-container {
+                justify-content: space-evenly;
+            }
+
+            .social-icons {
+                justify-content: center;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-col {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .newsletter input[type="email"] {
+                width: 100%;
+            }
+
+            .social-icons {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            #moon, #star, #earth, #sun {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-col h3 {
+                font-size: 18px;
+            }
+
+            .footer-bottom p {
+                font-size: 12px;
+            }
+
+            .newsletter input[type="email"] {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .footer-container {
+                gap: 20px;
+            }
+        }
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <div class="together">
+      <img src="logohere.png" alt="Logo" class="logo" />
+      <div class="onenav">
+      <a href="index.html" style="text-decoration: none;">ZARA
+        <sub>t</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub></a></div>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()"style="font-size:18px;">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="aboutus.html">Aboutus</a></li>
+      <li><a href="ADVICE.HTML">Advice</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="GET.html" class="getstarted-btn">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+  <h1>Privacy Policy</h1>
+  <div class="intro">
+    <p><strong>What is this document?</strong>
+    Privacy policies can be dense and inaccessible. Sometimes you just want your question answered quickly without having to navigate pages of text. With this document, we hope to make that easier. We tried our best to make our Privacy Policy as easy to navigate and understand as possible. If you have any questions while reading it, please don't hesitate to reach out to privacy@betterhelp.com.
+    For purposes of this Policy and unless otherwise specified, "data" includes information that is linked to one person or household including things like name, email address, phone numbers, device ID, Third Party identifiers, contact information, and communications with Therapists using our digital communication platform (the "Platform") to provide services ("Therapists"). Some jurisdictions might consider this to be "personal data," "personally identifiable information," or "sensitive personal data" in certain circumstances. When you use and access our app or website, you accept and agree to both the Terms and Conditions and this Privacy Policy, including that we'll share certain data with Service Providers.</p>
+
+    <p><strong>Will this document be updated?</strong>
+    We may update this Privacy Policy. When we make significant changes to this Policy, we will notify you through our website or app when you log in to your account. We encourage you to periodically review this page for the latest information.</p>
+
+    <p><strong>How to navigate this document?</strong>
+    This document is broken into seven sections divided by topic. To navigate to a section, reference the list below which provides examples of the types of questions that will be answered in that section. When you find a section that interests you, just click on it and you'll be automatically directed there.</p>
+  </div>
+
+  <div class="section-container">
+    <div class="card">
+      <div class="icon"><img src="datacollectionandprocessing.png" alt="icon"></div>
+      <h2>Data Collection and Processing</h2>
+      <ul>
+        <li>Name, email, and phone number</li>
+        <li>Device ID and IP address</li>
+        <li>Communication with Therapists</li>
+        <li>Usage data of the platform</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon"><img src="data_sharing.png" alt="icon"></div>
+      <h2>Data Sharing</h2>
+      <ul>
+        <li>With service providers for operations</li>
+        <li>To comply with legal requirements</li>
+        <li>No selling of data to third parties</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon"><img src="data_retention.png" alt="icon"></div>
+      <h2>Data Retention, Erasure, and Exporting</h2>
+      <ul>
+        <li>Data kept only as long as necessary</li>
+        <li>Right to request data deletion</li>
+        <li>Right to request data export</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon"><img src="security_and_anonymity.png" alt="icon"></div>
+      <h2>Security and Anonymity</h2>
+      <ul>
+        <li>Encrypted data transmission</li>
+        <li>Confidential communications</li>
+        <li>Strict access controls</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon"><img src="cookies_and_web_beacons.png" alt="icon"></div>
+      <h2>Cookies and Web Beacons</h2>
+      <ul>
+        <li>Used for personalization</li>
+        <li>Helps improve user experience</li>
+        <li>Can be disabled via browser</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon"><img src="Regional Privacy Notice.png" alt="icon"></div>
+      <h2>Regional Privacy Notices</h2>
+      <ul>
+        <li>GDPR rights in EU countries</li>
+        <li>CCPA rights for California residents</li>
+        <li>Contact support for more info</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  
+      <footer class="big-footer">
+        <div class="footer-container">
+            <div class="footer-col-brand">
+                <h2 style="color: #2b7a78; font-weight: bold;">ZARA
+                    <sub>T</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub>
+                </h2>
+                <p class="mqm">Where understanding meets transformation.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="ADVICE.HTML">Advics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legal and Accessibility Information</h3>
+                <ul>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="success.html">Sharing Settings</a></li>
+                    <li><a href="web-accessibilities.html">Web Accessibility</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact">
+                <h3>Contact</h3>
+                <p class="para">Email: zara@therapist.com</p>
+                <p class="para">Phone: +123 456 7890</p>
+                <p class="para">Location: Online & In-Person</p>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h3>Stay Connected</h3>
+                <p>Join our newsletter for mental wellness tips.</p>
+                <form>
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" id="moon"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram" id="star"></i></a>
+                    <a href="https://www.x.com/"><i class="fab fa-twitter" id="sun"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" id="earth"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ZARA Therapist. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

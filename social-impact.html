@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Acme&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Hanunoo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<style>
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fdfc;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+  color: #01b58d;
+  font-weight: 600;
+}
+
+/* HEADING */
+#tittle-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #145c4d;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  animation: fadeInDown 1s ease;
+}
+#tittle-heading span {
+  color: #01b58d;
+}
+
+/* NAVIGATION */
+#menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+#menu a {
+  padding: 10px 16px;
+  background: white;
+  border-radius: 6px;
+  color: #145c4d;
+  transition: 0.3s;
+}
+#menu a:hover {
+  background-color: #01b58d;
+  color: white;
+}
+
+/* SECTION HEADINGS */
+#social-he, #drive-us, #yc, #partners-he, #future, #work-with-us {
+  text-align: center;
+  margin: 20px auto;
+  color: #145c4d;
+  max-width: 900px;
+}
+
+h2, h3, h4, p {
+  text-align: center;
+}
+
+
+
+#social-he {
+  font-size: 1.5rem;
+  animation: fadeInUp 1s ease;
+}
+#drive-us, #yc, #partners-he, #future, #work-with-us {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+
+/* CARDS ROW */
+.cards-social, .cards-disaster, .cards-disaster1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.cardd, .cardds {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.cardd:hover, .cardds:hover {
+  transform: translateY(-5px);
+}
+
+.cards-social,
+.cards-disaster,
+.cards-disaster1,
+.community-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+
+#para-card, #info {
+  color: #555;
+  margin-top: 15px;
+}
+
+/* IMPACT METRICS */
+.discounted, .donated {
+  text-align: center;
+  padding: 20px;
+}
+#pars1, #pars {
+  font-size: 2.5rem;
+  color: #01b58d;
+  font-weight: bold;
+}
+
+.discounted,
+.donated,
+.mental-health,
+.work,
+.community {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+#contact {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+
+#poo {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* RELIEF SECTION */
+.cards-disasters {
+  margin-top: 30px;
+}
+#disaster {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #145c4d;
+}
+#relief {
+  text-align: center;
+  max-width: 800px;
+  margin: 10px auto;
+  color: #555;
+}
+
+/* COMMUNITY IMAGES */
+.community-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+#patnners-img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+#patnners-img:hover {
+  transform: scale(1.05);
+}
+
+/* MENTAL HEALTH */
+.mental-health {
+  text-align: center;
+  max-width: 900px;
+  margin: 50px auto;
+}
+#health {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* WORK WITH US */
+.work {
+  text-align: center;
+  margin-top: 50px;
+}
+#us {
+  margin: 15px auto;
+  font-size: 1.1rem;
+}
+#us span {
+  color: #01b58d;
+}
+#contact {
+  padding: 12px 25px;
+  background-color: #145c4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+#contact:hover {
+  background-color: #01b58d;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #tittle-heading {
+    font-size: 2rem;
+  }
+  .cardd, .cardds {
+    width: 100%;
+    max-width: 350px;
+  }
+  #social-he {
+    font-size: 1.2rem;
+  }
+  .community-img {
+    gap: 8px;
+  }
+  #patnners-img {
+    width: 90px;
+  }
+}
+
+    .navbar {
+      display: flex;
+      font-family: "Nunito", sans-serif;
+      font-optical-sizing: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 1px solid #559288;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .onenav a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #559288;
+      margin-left: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+
+    }
+
+    sub {
+      font-size: small;
+      font-style: italic;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+
+    }
+
+    header {
+        background-color:  #007f5f;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        padding: 10px;
+        height: 40px;
+        color: white;
+      }
+
+    .together {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(93, 92, 92, 0.963);
+      font-size: 1rem;
+    }
+
+    .nav-links a:not(.login-btn):not(.getstarted-btn):hover {
+      border-bottom: 4px solid #559288;
+      padding-bottom: 20px;
+    }
+
+    .login-btn,
+    .getstarted-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      border: 2px solid #559288;
+      color: #559288;
+    }
+
+    .login-btn:hover {
+      background-color: #5592885f;
+    }
+
+    .getstarted-btn {
+      background-color: #5592885f;
+      border: none;
+
+    }
+
+    .getstarted-btn:hover {
+      background-color: #559288;
+      color: white;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        font-size: small;
+        top: 57px;
+        right: 0;
+        left: 30px;
+        background-color: white;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+
+      }
+
+    
+
+      .menu-icon {
+        display: block;
+        font-size: small;
+      }
+
+      .onenav {
+        font-size: small;
+
+      }
+
+      sub {
+        font-size: smaller;
+      }
+
+      .logo {
+        height: 40px;
+
+      }
+
+      .login-btn {
+        margin-top: 5px;
+        margin-left: -10px;
+      }
+
+      .getstarted-btn {
+        margin-top: 10px;
+        margin-left: -10px;
+
+      }
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      font-family: "Nunito", sans-serif;
+    }
+
+    .mno {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 15px;
+      gap: 20px;
+    }
+
+    .abc {
+      font-family: "PT Sans", sans-serif;
+      font-weight: 400;
+
+
+    }
+
+    .form-container {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 40px;
+
+
+    }
+
+    .side-boxes {
+      max-width: 300px;
+      font-family: "PT Sans", sans-serif;
+      margin-top: 50px;
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .info-box,
+    .crisis-note {
+      background-color: #5592885f;
+      padding: 20px;
+      font-family: "PT Sans", sans-serif;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 0.95rem;
+    }
+
+    .info-box a,
+    .crisis-note a {
+      color: #007f5f;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .radio-group {
+      margin-bottom: 20px;
+    }
+
+    .radio-group label {
+      display: block;
+      font-family: "Nunito", sans-serif;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .click {
+      background-color: #559288;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+
+      font-family: "Nunito", sans-serif;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .click:hover {
+      background-color: #559288d0;
+    }
+
+    @media (max-width: 768px) {
+      .mno {
+        flex-direction: column;
+        padding: 20px 10px;
+      }
+
+      .form-container,
+      .side-boxes {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 20px;
+        font-size: small;
+      }
+
+      .info-box,
+      .crisis-note {
+        font-size: small;
+        padding: 15px;
+      }
+
+      client-support button {
+        font-size: small;
+      }
+    }
+
+       /* ===== ZARA FOOTER STYLING ===== */
+.zara-footer {
+background: linear-gradient(to top, #559288a4, #f6fbfb); 
+color: #2b7a78;
+      border-top-right-radius: 40px;
+      border-top-left-radius: 40px;
+border: #00796b 2px solid;
+      padding: 60px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.zara-footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.zara-footer-brand .zara-logo {
+  font-size: 28px;
+color: #2b7a78;
+  margin-bottom: 10px;
+}
+.zara-footer-brand .highlight {
+color: #2b7a78;
+  font-weight: bold;
+}
+.tagline {
+color: #2b7a78;
+  font-size: 14px;
+}
+
+.zara-footer-col h3, .zara-footer-newsletter h3 {
+color: #2b7a78;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.zara-footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.zara-footer-col ul li {
+  margin-bottom: 8px;
+}
+.zara-footer-col ul li a {
+color: #2b7a78;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.zara-footer-col ul li a:hover {
+color: #2b7a78;
+}
+
+.zara-footer-newsletter form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.zara-footer-newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+.zara-footer-newsletter button {
+  background: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.zara-footer-newsletter button:hover {
+  background: #144442;
+}
+
+.subscribe-msg {
+  margin-top: 10px;
+  color: #07302e;
+  font-size: 14px;
+  display: none;
+}
+
+.zara-social-icons {
+  margin-top: 20px;
+}
+.zara-social-icons a {
+  color: #DEF2F1;
+  margin-right: 12px;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+.zara-social-icons a:hover {
+   color: #2b7a78;;
+  transform: scale(1.2);
+}
+h2  sub{
+  text-transform: lowercase;
+  font-size: small;
+  font-style: italic;
+}
+
+.zara-footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+  font-size: 14px;
+  color: #C7ECEE;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .zara-footer-container {
+    text-align: center;
+  }
+  .zara-footer-newsletter form {
+    flex-direction: column;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="together">
+      <img src="logohere.png" alt="Logo" class="logo" />
+      <div class="onenav">
+        <a href="index.html" style="text-decoration: none;">ZARA
+        <sub>t</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub></a>
+      </div>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()"style="color: black; font-size: 18px;font-weight:bold;" >☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="advice.html">Advice</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="get.html" class="getstarted-btn">Get Started</a></li>
+    </ul>
+  </nav>
+    <h2 id="tittle-heading"><span>social</span> impact</h2>
+    <nav id="menu">
+        <a href="aboutus.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="social-impact.html">Social-impact</a>
+        <a href="client-outcomes.html">Client outcomes</a>
+        <a href="#social" style="display: none;"></a>
+    </nav>
+    <section id="social">
+        <div class="main-social">
+<h3 id="social-he">
+    Our social impact program is committed to making therapy <br>equitable and accessible to under-resourced communities <br>and individuals in need. 
+</h3>
+
+        
+<h4 id="drive-us">
+    What drives us:</h4>
+    <div class="row">
+        <div class="col-lg-4 md-lg-4"> 
+            
+            <div class="cards-social">
+                <div class="cardd">
+                    <img id="oop" src="https://assets.betterhelp.com/about/social-impact/IncreasingAccess.png?v=71aae1049dcd" width="250px" height="150px" alt="images">
+                  <p id="para-card">  Increasing <br>equitable access</p>
+                </div> 
+
+                <div class="cardd">
+                    <img id="oop" src="https://assets.betterhelp.com/about/social-impact/ReducingStigma.png?v=71aae1049dcd" alt="images">
+                    <p id="para-card">Reducing stigma</p>
+                </div>
+                
+                <div class="cardd">
+                    <img id="oop" src="https://assets.betterhelp.com/about/social-impact/ProvidingSupport.png?v=71aae1049dcd" alt="images">
+                   <p id="para-card"> Providing support <br>in crisis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-continued impact">
+
+        <h3 id="yc">our continued impact</h3>
+        <div class="discounted">
+       <p id="pars1">€65,697,925</p>
+       <p id="poo">Given in discounts and financial <br>aid to cover therapy costs <br>for low-income individuals</p>
+     </div>
+    <div class="donated">
+     <p id="pars">106,202</p>
+       <p id="poo">Free months of therapy <br> donated to communities in need</p>
+      </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-3 md-lg-3">
+            <div class="cards-disasters">          
+<h3 id="disaster">Disaster and crisis relief</h3>
+<p id="relief">In the wake of natural disasters and crisis situations worldwide, <br>ZaraTherapy shares resources and provides impacted communities <br>and individuals with free mental health care and support.</p>
+<div class="cards-disaster">   
+<div class="cardds">
+<img id="dis" src="images/dis1.jpg" alt="images">
+<p id="info">In response to Hurricane <br>Ian in Florida, ZaraTherapy <br>donated therapy to <br>individuals and <br>communities affected.</p>
+                </div>
+
+                <div class="cardds">
+                    <img id="dis" src="images/dis2.jpg" alt="images">
+                    <p id="info">Following the Highland Park shooting,ZaraTherapy reached out to help with free therapy for survivors and those impacted.</p>
+                                    </div>
+
+                                    <div class="cardds">
+                                        <img id="dis" src="images/dis3.jpg" alt="images">
+                                        <p id="info">During the humanitarian crisis in Ukraine, ZaraTherapy was there for Ukrainians worldwide by providing free therapy to those impacted.</p>
+                                                        </div>
+
+                                                        <div class="cardds">
+                                                            <img id="dis" src="images/dis4.jpg" alt="images">
+                                                            <p id="info">In the aftermath of the shooting at Robb Elementary School in Uvalde, TX, ZaraTherapy reached out to provide free therapy to families impacted.</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                            <div class="col-lg-3">
+                                                                                <div class="cards-disaster1">   
+                                                                                    <div class="cardds">
+                                                                                    <img id="dis" src="images/dis6.jpg" alt="images">
+                                                                                    <p id="info">In response to Hurricane Ida, ZaraTherapy donated therapy to individuals and communities affected.</p>
+                                                                                                    </div>
+                                                                                    
+                                                             <div class="cardds">
+                                                                                    <img id="dis" src="images/dis5.jpg" alt="images">
+                                                                                      <p id="info">ZaraTherapy supported the LGBTQ+ community and individuals impacted by the shooting at Club Q in Colorado Springs with free therapy.</p>
+                                                                                                                        </div>
+                                                                                    
+                                                                                                                        <div class="cardds">
+                                                                                                                            <img id="dis" src="images/dis7.jpg" alt="images">
+                                                                                                                            <p id="info">To help families impacted by the horrific flooding that hit the Midwest in the Summer of 2022,ZaraTherapy provided free therapy.</p>
+                                                                                                                                            </div>
+                                                                                    
+                                                                                                                                            <div class="cardds">
+                                                                                                                                                <img id="dis" src="images/dis8.jpg" alt="images">
+                                                                                                                                                <p id="info">In response to the shooting at the Central Visual and Performing Arts High School in St.Louis, ZaraTherapy provided support through therapy to those in need.</p>
+                                                                                                                                                                                                                    </div>                           
+                                                   </div>
+                                                                                                                                      
+            </div>
+        </div>
+      </div>
+      
+    
+        </div>
+      
+      </div>
+
+
+<div class="community">
+    <h3 id="partners-he">Partners and community</h3>
+    <p id="unite">To further our mission, ZaraTherapy partners with over 100 impactful non- <br>profit organizations, to donate free therapy to a variety of under- <br>resourced communities and break down barriers to accessing therapy for <br>people in need.</p>
+
+<div class="community-img">
+    <img src="images/PARTNERS.png" alt="images" id="patnners-img">
+    <img src="images/PARTNERS2.png" alt="images" id="patnners-img">
+    <img src="images/PARTNER3.png" alt="images" id="patnners-img">
+    <img src="images/PARTNER4.png" alt="images" id="patnners-img">
+    <img src="images/BMHA.png" alt="images" id="patnners-img">
+    <img src="images/inclusive-therapists.png" alt="images" id="patnners-img">
+    <img src="images/me-too.png" alt="images" id="patnners-img">
+    <br>
+    <img src="images/out-foundation.png" alt="images" id="patnners-img">
+    <img src="images/nami.png" alt="images" id="patnners-img">
+    <img src="images/gds.png" alt="images" id="patnners-img"> 
+    <img src="images/ee062f7d-napablogo.png" alt="images" id="patnners-img">
+    <img src="images/thurgood-marshall.png" alt="images" id="patnners-img"> <img src="images/6c53772c-carefoundationlogo.png" alt="images" id="patnners-img">
+    <img src="images/8996f7ef-download1.png" alt="images" id="patnners-img">
+<br>
+    <img src="images/08df8fca-pointfoundationlogo.png" alt="images" id="patnners-img">
+    <img src="images/9dd933e8-we2matter.png" alt="images" id="patnners-img">
+    <img src="images/62a21abf-transsocialinclogo.png" alt="images" id="patnners-img">
+    <img src="images/active-minds.png" alt="images" id="patnners-img">
+    <img src="images/ASJ.jpeg" alt="images" id="patnners-img">
+    <img src="images/Transformation-Project.png" alt="images" id="patnners-img">
+    <img src="images/Baby2Baby.png" alt="images" id="patnners-img">
+    <br>
+    <img src="images/bold.png" alt="images" id="patnners-img">
+    <img src="images/CAST_LA.png" alt="images" id="patnners-img">
+    <img src="images/PFLAG-SF.png" alt="images" id="patnners-img"> <img src="images/PFLAG-SF.png" alt="images" id="patnners-img">
+    <img src="images/732545b3-allhandsandheartslogo.png" alt="images" id="patnners-img"> <img src="images/5c25038c-upliftfoundationantelopevalley.png" alt="images" id="patnners-img">
+    <img src="images/6fd788e2-pridelinkcolor.jpeg" alt="images" id="patnners-img">
+</div>
+</div>
+
+
+
+
+<div class="mental-health">
+    <h3 id="future">The Future of Mental Health Scholarship</h3>
+    <p id="health">As part of our mission to make high-quality mental health care accessible and affordable <br>for anyone in need, ZaraTherapy is investing in the future of mental healthcare providers <br>through our scholarship program: the Future of Mental Health Scholarship.</p>
+    <br>
+    <p id="health">This program calls upon emerging scholars in this space to share their stories and passion <br>for mental health in order for us to support and empower their impact on the field.</p>
+    <br>
+    <p id="health">Our fund currently awards 10 college students studying psychology or related fields with <br>$10,000 towards their education.</p>
+</div>
+
+
+     
+    </div>
+  </div>
+
+  <div class="work">
+    <h3 id="work-with-us">work with us</h3>
+    <p id="us">Do you work with a 501(c)(3) non-profit organization that would be interested <br><span> in partnering with ZaraTherapy? </span></p>
+
+    <button type="button" id="contact" onclick="window.location.href ='contact.html'">contact</button>
+  </div>
+ 
+        </div>
+    </section>
+
+          <!-- FOOTER -->
+<footer class="zara-footer">
+  <div class="zara-footer-container">
+    
+    <!-- Brand -->
+    <div class="zara-footer-brand">
+       <h2 style="color: #2b7a78; font-weight: bold;">ZARA
+                    <sub>T</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub>
+                </h2>
+
+      <p class="tagline">Where understanding meets transformation.</p>
+    </div>
+
+    <!-- Explore -->
+    <div class="zara-footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="advice.html">Advice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div class="zara-footer-col">
+      <h3>Legal & Accessibility</h3>
+      <ul>
+        <li><a href="terms.html">Terms and Conditions</a></li>
+        <li><a href="privacypolicy.html">Privacy Policy</a></li>
+        <li><a href="success.html">Sharing Settings</a></li>
+        <li><a href="web-accessibilities.html">Web Accessibility</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="zara-footer-col">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:zara@therapist.com" style="text-decoration: none; color: #007f5f;">zara@therapist.com</a></p>
+      <p>Phone: +123 456 7890</p>
+      <p>Location: Online & In-Person</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="zara-footer-newsletter">
+      <h3>Stay Connected</h3>
+      <p>Join our newsletter for mental wellness tips.</p>
+      <form id="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="subscribe-msg" class="subscribe-msg" style="color: #144442;"></p>
+
+      <div class="zara-social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.x.com/"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="zara-footer-bottom">
+    <p>&copy; 2025 ZARA Therapist. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+
+document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const emailField = document.getElementById('newsletter-email');
+  const message = document.getElementById('subscribe-msg');
+
+  if (emailField.value.trim() === "") {
+    message.textContent = "Please enter a valid email.";
+    message.style.color = "#ffcccc";
+    message.style.display = "block";
+    return;
+  }
+
+  message.textContent = "Thanks for subscribing!";
+  message.style.color = "#C7ECEE";
+  message.style.display = "block";
+  emailField.value = "";
+
+  setTimeout(() => {
+    message.style.display = "none";
+  }, 4000);
+
+
+
+});
+
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #fefefe;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #559288;
+  }
+  
+  .header p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .section {
+    background-color: #5592885f;
+    padding: 3rem 1rem;
+  }
+  
+  .section h2 {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .review-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .quote {
+    font-size: 3rem;
+    color: #559288;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  
+  .card .therapist {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .therapist img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .therapist-info {
+    font-size: 0.9rem;
+  }
+  
+  .therapist-info strong,
+  .bb {
+    display: block;
+    color: #559288;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .more-reviews {
+    color: #007E45;
+    font-size: 0.85rem;
+    text-decoration: underline;
+  }
+  
+  .meta {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .review-text {
+      font-size: 1rem;
+    }
+  }

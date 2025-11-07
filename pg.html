@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Zara Therapy offers accessible, affordable online therapy from licensed professionals. Start feeling better today.">
+  <title>Zara Therapy Full Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f8f6;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      color: #333;
+      background-color: #ffffff;
+      border-radius: 32px;
+      margin: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .therapy-options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .option {
+      flex: 1 1 300px;
+      padding: 30px;
+      border-radius: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      background-color: #f0fdfb;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .option:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .option img.icon {
+      width: 120px;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .option h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #204e42;
+    }
+
+    .option p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .btn {
+      background-color: #559288;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #3e6f66;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      .therapy-options {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="section">
+  <h1 style="font-size: 2.8rem; color: #204e42;">You deserve to be happy.</h1>
+  <p style="font-size: 1.3rem; color: #444;">What type of therapy are you looking for?</p>
+
+  <div class="therapy-options">
+    <!-- Individual -->
+    <a href="#signup" class="option">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="Individual Icon">
+      <h3>Individual</h3>
+      <p>For myself ➜</p>
+    </a>
+
+    <!-- Couples -->
+    <a href="#signup" class="option">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2807/2807114.png" alt="Couples Icon">
+      <h3>Couples</h3>
+      <p>For me and my partner ➜</p>
+    </a>
+
+    <!-- Teen -->
+    <a href="#signup" class="option">
+      <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Teen Icon">
+      <h3>Teen</h3>
+      <p>For my child ➜</p>
+    </a>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <a href="#signup"><button class="btn">Begin Your Journey</button></a>
+  </div>
+</section>
+
+<!-- Add your remaining sections (how it works, testimonials, FAQ, etc.) here -->
+
+</body>
+</html>

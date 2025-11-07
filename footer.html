@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=DM+Serif+Text:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Hanunoo&family=Oswald:wght@200..700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .big-footer {
+            background: linear-gradient(to top, #559288a4, #f6fbfb);
+            padding: 60px 20px 30px;
+            font-family: 'Segoe UI', sans-serif;
+            margin-bottom: -10px;
+            color: #2e3d49;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border: 2px solid #559288;
+            box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .footer-col-brand {
+            color: #559288;
+            font-family: "Montserrat", sans-serif;
+            margin-left: 20px;
+        }
+
+        sub {
+            font-size: small;
+            font-style: italic;
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+
+        }
+
+        .mqm {
+            color: black;
+        }
+
+        .footer-col {
+            flex: 1 1 200px;
+            min-width: 220px;
+            font-family: "Nunito", sans-serif;
+            color: black;
+        }
+
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #559288;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+            font-size: small;
+            color: black;
+        }
+
+        .footer-col a {
+            color: #3d5a80;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: #ee6c4d;
+        }
+
+        .brand h2 {
+            font-size: 32px;
+            color: #2b7a78;
+            margin-bottom: 10px;
+        }
+
+        .brand p {
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .para {
+            font-size: small;
+        }
+
+        .contact p {
+            margin-bottom: 8px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter button {
+            padding: 10px 18px;
+            border: none;
+            background-color: #559288;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .social-icon {
+            margin-top: 10px;
+            font-size: large;
+            margin-left: 200px;
+        }
+
+
+        .social-icons a {
+            color: #3d5a80;
+            font-size: larger;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid black;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #moon {
+            margin-left: 1000px;
+            margin-bottom: 10px;
+        }
+
+        #star {
+            margin-left: 30px;
+        }
+
+        #earth {
+            margin-left: 30px;
+        }
+
+        #sun {
+            margin-left: 30px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .newsletter input[type="email"] {
+                width: 100%;
+            }
+
+            .social-icons {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+        }
+    </style>
+    <footer class="big-footer">
+        <div class="footer-container">
+            <div class="footer-col-brand">
+                <h2>ZARA
+                    <sub>T</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub>
+                </h2>
+                <p class="mqm">Where understanding meets transformation.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Buisness</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="advice.html">Advics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legal and Accessibility Information</h3>
+                <ul>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sharing Settings</a></li>
+                    <li><a href="webaccessibility.html">Web Accessibility</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact">
+                <h3>Contact</h3>
+                <p class="para">Email: zara@therapist.com</p>
+                <p class="para">Phone: +123 456 7890</p>
+                <p class="para">Location: Online & In-Person</p>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h3>Stay Connected</h3>
+                <p>Join our newsletter for mental wellness tips.</p>
+                <form>
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" "><i class=" fab fa-facebook-f" id="moon"></i></a>
+                    <a href="https://www.instagram.com/""><i class=" fab fa-instagram" id="star"></i></a>
+                    <a href="https://www.x.com/"><i class="fab fa-twitter" id="sun"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" id="earth"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ZARA Therapist. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

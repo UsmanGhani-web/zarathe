@@ -1,0 +1,90 @@
+:root {
+    --main-color: #559288;
+    --main-color-light: #5592885f;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background: #f4fdfa;
+    color: #333;
+  }
+  
+  header {
+    background-color: var(--main-color-light);
+    padding: 3rem 1rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-color);
+  }
+  
+  .content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-color);
+    margin-top: 2rem;
+  }
+  
+  p {
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  
+  a {
+    color: var(--main-color);
+    text-decoration: underline;
+  }
+  
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #3e716a;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .content {
+      padding: 1.5rem 1rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  

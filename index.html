@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZARA Therapy</title>
+  <link rel="stylesheet" href="style2_updated_themed_footer_match_success.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito&display=swap" rel="stylesheet">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+ 
+ 
+ <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #559288;
+  color: white;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: rgba(85, 146, 136, 0.37);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #4e7a61;
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #559288;
+}
+
+.tick {
+  color: #007E45;
+  font-size: 20px;
+}
+
+.cross {
+  color: #559288;
+  font-size: 20px;
+}
+
+.quote, .testimonial {
+  text-align: center;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+
+.quote {
+  margin-top: 40px;
+  font-size: 18px;
+  font-style: italic;
+  min-height: 60px;
+}
+
+.testimonial {
+  margin: 30px 0;
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.dots {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #007E45;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #559288;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .testimonial img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #fefefe;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #559288;
+  }
+  
+  .header p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .section {
+    background-color: #5592885f;
+    padding: 3rem 1rem;
+  }
+  
+  .section h2 {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .review-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .quote {
+    font-size: 3rem;
+    color: #559288;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  
+  .card .therapist {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .therapist img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .therapist-info {
+    font-size: 0.9rem;
+  }
+  
+  .therapist-info strong,
+  .bb {
+    display: block;
+    color: #559288;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .more-reviews {
+    color: #007E45;
+    font-size: 0.85rem;
+    text-decoration: underline;
+  }
+  
+  .meta {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .review-text {
+      font-size: 1rem;
+    }
+  }
+
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: white;
+      border-bottom: 1px solid #559288;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .onenav a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #559288;
+      margin-left: 10px;
+    }
+
+    sub {
+      font-size: small;
+    }
+
+    .together {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(93, 92, 92, 0.963);
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 4px solid #559288;
+      padding-bottom: 4px;
+    }
+
+    .login-btn,
+    .getstarted-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      border: 2px solid #559288;
+      color: #559288;
+    }
+
+    .login-btn:hover {
+      background-color: rgba(128, 128, 128, 0.1);
+    }
+
+    .getstarted-btn {
+      background-color: #5592885f;
+      border: none;
+      color: white;
+    }
+
+    .getstarted-btn:hover {
+      background-color: #559288;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 54px;
+        right: 0;
+        left: 30px;
+        background-color: white;
+        border-top: 1px solid #559288;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+        font-size: small;
+      }
+
+      .onenav {
+        font-size: small;
+        margin-left: 45px;
+      }
+
+      sub {
+        font-size: smaller;
+      }
+
+      .logo {
+        height: 40px;
+      }
+    }
+
+
+    .big-footer {
+      background: linear-gradient(to top, #559288a4, #f6fbfb);
+      padding: 60px 20px 30px;
+      font-family: 'Segoe UI', sans-serif;
+      margin-bottom: -10px;
+      color: #2e3d49;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.05);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .footer-col-brand {
+      color: #559288;
+      font-family: "Montserrat", sans-serif;
+      margin-left: 20px;
+    }
+
+    sub {
+      font-size: small;
+      font-style: italic;
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    .mqm {
+      color: black;
+    }
+
+    .footer-col {
+      flex: 1 1 200px;
+      min-width: 220px;
+      font-family: "Nunito", sans-serif;
+      color: black;
+    }
+
+    .footer-col h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #559288;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 10px;
+      font-size: small;
+      color: black;
+    }
+
+    .footer-col a {
+      color: #3d5a80;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ee6c4d;
+    }
+
+    .brand h2 {
+      font-size: 32px;
+      color: #2b7a78;
+      margin-bottom: 10px;
+    }
+
+    .brand p {
+      max-width: 300px;
+      line-height: 1.6;
+    }
+
+    .para {
+      font-size: small;
+    }
+
+    .contact p {
+      margin-bottom: 8px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 18px;
+      border: none;
+      background-color: #559288;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .social-icon {
+      margin-top: 10px;
+      font-size: large;
+      margin-left: 200px;
+    }
+
+    .social-icons a {
+      color: #3d5a80;
+      font-size: larger;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 25px;
+      border-top: 1px solid black;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    #moon {
+      margin-left: 1000px;
+      margin-bottom: 10px;
+    }
+
+    #star {
+      margin-left: 30px;
+    }
+
+    #earth {
+      margin-left: 30px;
+    }
+
+    #sun {
+      margin-left: 30px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .footer-container {
+        justify-content: space-evenly;
+      }
+
+      .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-col {
+        min-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .newsletter input[type="email"] {
+        width: 100%;
+      }
+
+      .social-icons {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      #moon,
+      #star,
+      #earth,
+      #sun {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-col h3 {
+        font-size: 18px;
+      }
+
+      .footer-bottom p {
+        font-size: 12px;
+      }
+
+      .newsletter input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .footer-container {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="together">
+      <img src="logohere.png" alt="Logo" class="logo" />
+      <div class="onenav">
+        <a href="index.html" style="text-decoration: none;">ZARA
+        <sub>t</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub></a>
+      </div>
+    </div>
+    <div class="menu-icon" onclick="toggleMenu()" style="color: black; font-size: 18px;">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="advice.html">Advice</a></li>
+      <li><a href="FAQ.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="get.html" class="getstarted-btn">Get Started</a></li>
+    </ul>
+  </nav>
+
+ 
+  <section class="hero-section">
+    <h1>You deserve to be happy.</h1>
+    <p>What type of therapy are you looking for?</p>
+    <div class="therapy-options">
+      <div class="option-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922656.png" alt="Individual Icon">
+        <h3>Individual</h3>
+        <p>For myself ➜</p>
+      </div>
+      <div class="option-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Couples Icon">
+        <h3>Couples</h3>
+        <p>For me and my partner ➜</p>
+      </div>
+      <div class="option-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2922/2922541.png" alt="Teen Icon">
+        <h3>Teen</h3>
+        <p>For my child ➜</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <h2>How ZARA Therapy Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/3479/3479316.png" alt="Sign Up">
+        <h4>Sign Up</h4>
+        <p>Create your account to get started.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png" alt="Get Matched">
+        <h4>Get Matched</h4>
+        <p>We’ll find the right therapist for you.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Start Therapy">
+        <h4>Start Therapy</h4>
+        <p>Begin your journey to better mental health.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose">
+    <h2>Why Choose ZARA Therapy?</h2>
+    <ul>
+      <li>✔ Licensed and vetted professionals</li>
+      <li>✔ Choose your mode: text, call, or video</li>
+      <li>✔ Affordable plans for every budget</li>
+      <li>✔ Completely private and secure</li>
+    </ul>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      “ZARA Therapy matched me with a therapist who truly gets me. Life-changing!”
+    </div>
+    <div class="testimonial">
+      “The flexible schedule made therapy fit into my life perfectly.”
+    </div>
+    <div class="testimonial">
+      “Affordable, professional, and supportive. Highly recommended.”
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">What is ZARA Therapy?</div>
+        <div class="accordion-body">ZARA Therapy is an online platform offering licensed mental health counseling from professionals.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Is ZARA Therapy right for me?</div>
+        <div class="accordion-body">Yes! It's flexible, affordable, and private—perfect for busy schedules.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">How much does it cost?</div>
+        <div class="accordion-body">Pricing depends on the therapist and plan you choose. We keep it budget-friendly.</div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <h1><strong>Zara Therapy vs. traditional in-office therapy</strong></h1>
+    <table>
+      <tr><th></th><th><strong>Zara Therapy</strong></th><th><strong>In-office</strong></th></tr>
+      <tr><td>Provided by a qualified therapist</td><td class="tick">✔</td><td class="tick">✔</td></tr>
+      <tr><td>In-office visits</td><td class="cross">✘</td><td class="tick">✔</td></tr>
+      <tr><td><strong>Messaging any time</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Chat sessions</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Phone sessions</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Video sessions</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Easy scheduling</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Digital worksheets</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Group sessions</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Smart provider matching</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Easy to switch providers</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+      <tr><td><strong>Access therapy from anywhere</strong></td><td class="tick">✔</td><td class="cross">✘</td></tr>
+    </table>
+
+    <div class="quote" id="quote">
+      <p>“Michelle listens and provides excellent guidance through life's situations.”</p>
+    </div>
+    <div class="testimonial" id="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Doctor" />
+      <p><strong>Michelle Wilkinson (MA, LPC-S)</strong></p>
+    </div>
+
+    <div class="dots">
+      <span class="dot active" onclick="showTestimonial(0)"></span>
+      <span class="dot" onclick="showTestimonial(1)"></span>
+      <span class="dot" onclick="showTestimonial(2)"></span>
+    </div>
+
+    <button class="btn" onclick="window.location.href='success.html'" li >More success stories</button>
+  </div>
+
+  <script src="home3.js"></script>
+
+  <script src="script2.js"></script>
+        
+    <footer class="big-footer">
+        <div class="footer-container">
+            <div class="footer-col-brand">
+                <h2 style="color: #2b7a78; font-weight: bold;">ZARA
+                    <sub>T</sub><sub>h</sub><sub>e</sub><sub>r</sub><sub>a</sub><sub>p</sub><sub>i</sub><sub>s</sub><sub>t</sub>
+                </h2>
+                <p class="mqm">Where understanding meets transformation.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="advice.html">Advics</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legal and Accessibility Information</h3>
+                <ul>
+                    <li><a href="terms.html">Terms and Conditions</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="success.html">Sharing Settings</a></li>
+                    <li><a href="webaccessibility.html">Web Accessibility</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact">
+                <h3>Contact</h3>
+                <p class="para">Email: zara@therapist.com</p>
+                <p class="para">Phone: +123 456 7890</p>
+                <p class="para">Location: Online & In-Person</p>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h3>Stay Connected</h3>
+                <p>Join our newsletter for mental wellness tips.</p>
+                <form>
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class=" fab fa-facebook-f" id="moon"></i></a>
+                    <a href="https://www.instagram.com/"><i class=" fab fa-instagram" id="star"></i></a>
+                    <a href="https://www.x.com/"><i class="fab fa-twitter" id="sun"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" id="earth"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ZARA Therapist. All rights reserved.</p>
+        </div>
+    </footer>
+
+ <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

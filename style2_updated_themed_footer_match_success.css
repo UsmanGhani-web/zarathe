@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #559288;
+    color: white;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .therapy-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .option-card {
+    background: rgba(85, 146, 136, 0.37);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .option-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .option-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  .steps-section, .why-choose, .testimonials, .faq {
+    padding: 3rem 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .step {
+    background: rgba(85, 146, 136, 0.37);
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .why-choose ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .why-choose li {
+    background: rgba(85, 146, 136, 0.37);
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .testimonials .testimonial {
+    background: rgba(85, 146, 136, 0.37);
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+    max-width: 600px;
+    font-style: italic;
+  }
+  
+  .accordion {
+    text-align: left;
+    margin-top: 1.5rem;
+  }
+  
+  .accordion-item {
+    background: rgba(85, 146, 136, 0.37);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  
+  .accordion-header {
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #559288;
+  }
+  
+  .accordion-body {
+    padding: 1rem;
+    display: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  .accordion-item.active .accordion-body {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .therapy-options, .steps {
+      flex-direction: column;
+      align-items: center;
+    }
+    .option-card, .step {
+      width: 90%;
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #fefefe;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #559288;
+  }
+  
+  .header p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .section {
+    background-color: #5592885f;
+    padding: 3rem 1rem;
+  }
+  
+  .section h2 {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .review-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .quote {
+    font-size: 3rem;
+    color: #559288;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  
+  .card .therapist {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .therapist img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+  
+  .therapist-info {
+    font-size: 0.9rem;
+  }
+  
+  .therapist-info strong,
+  .bb {
+    display: block;
+    color: #559288;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .more-reviews {
+    color: #007E45;
+    font-size: 0.85rem;
+    text-decoration: underline;
+  }
+  
+  .meta {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: #777;
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .review-text {
+      font-size: 1rem;
+    }
+  }
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-family: 'Nunito', sans-serif;
+  border-top: 1px solid #ffffff44;
+}
+
+.footer a {
+  color: #ffffffcc;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.9rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer a {
+    display: block;
+    margin: 8px 0;
+  }
+}

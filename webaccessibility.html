@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Nunito&display=swap" rel="stylesheet">
+<style>
+    :root {
+    --main-color: #559288;
+    --main-color-light: #5592885f;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background: #f4fdfa;
+    color: #333;
+  }
+  header {
+    background-color: var(--main-color-light);
+    padding: 3rem 1rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--main-color);
+  }
+
+    #accessibility{
+        color: #fff;
+        font-family: "montserrat",sans-serif;
+font-size: 2rem;
+margin-bottom: 20px;
+font-weight: 600;
+}
+
+#utilize{
+    font-family: "nunito",sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+}
+
+.web{
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+
+
+
+.enabling{
+    width: 100%;
+    height: 250px;
+    margin-top: 150px;
+}
+
+#browser{
+    margin-top: 50px;
+    margin-left: 190px;
+    font-family: "montserrat",sans-serif;
+font-size: 1.5rem;
+margin-bottom: 20px;
+font-weight: 600;
+}
+
+#Points{
+    margin-left: 80px;
+}
+
+#pointer{
+margin-left: 180px;
+}
+
+
+#mobile{
+    margin-top: 50px;
+    margin-left: 190px;
+    font-family: "montserrat",sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#standards{
+margin-left: 190px;
+font-family: "nunito",sans-serif;
+font-weight: 500;
+line-height: 1.7;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+#standards span{
+    color: #558892;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #3e716a;
+  }
+  
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .web {
+      padding: 1.5rem 1rem;
+    }
+  
+    #accessibility {
+      font-size: 1.2rem;
+    }
+  }
+  
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>web accessibility</h1>
+      </header>
+
+  <div class="web">
+    <h3 id="accessibility">our commitment to accessibility</h3>
+    <p id="utilize">ZaraTherapy utilizes various technologies that are meant to make our website reasonably <br>accessible. By visiting this page our accessibility features have been enabled.</p>
+  </div>
+
+  <div class="enabling">
+    <h3 id="browser">Enabling accessibility on desktop browser</h3>
+    <ul id="Points">
+        <li id="Points">To launch the accessibility preferences interface at any time, press the Alt+9 keyboard combination or by <br>clicking on the icon that appears on the corner of the page.</li>
+        <li id="Points">To turn on  adjustments at any time, press the Alt+1 keyboard combination.</li>
+        <li id="Points">To turn off keyboard navigation at any time, press the Alt+8 keyboard combination.</li>
+    </ul>
+    <p id="pointer">Please disable any  software to ensure that this interface functions properly.</p>
+
+   
+
+    <h4 id="mobile">Accessibility for mobile users</h4>
+    <p id="standards">For mobile users, we recommend using your device's native accessibility features. Instructions for iPhone can be <br>found  <span>here</span>, and for Android can be found  <span>here.</span></p><br>
+
+    <h4 id="mobile">Commitment and standards</h4>
+    <p id="standards">We are actively striving to provide equal access and opportunity for individuals with any disabilities and to deliver a <br>web experience that is aligned with the most recent Web Content Accessibility Guidelines (WCAG) at the AA level, <br>published by World Wide Web Consortium (W3C).</p>
+
+    <h4 id="mobile">comments & feedback</h4>
+    <p id="standards">We strive to adhere to the accepted guidelines and standards for reasonable accessibility and usability. If you <br>experience any difficulty accessing our website please contact us at <span>contact@ZaraTherapy.com</span> with any questions or <br>concerns.</p>
+  </div>
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  </script>
+</body>
+</html>
