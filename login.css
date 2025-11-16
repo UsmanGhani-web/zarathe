@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(family\,jpg.jpg) no-repeat center center/cover;
+  }
+  
+  .container {
+    background-color: rgba(0, 64, 48, 0.6);
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    padding: 40px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .quote {
+    color: white;
+    flex: 1 1 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .quote h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .quote p {
+    font-size: 1rem;
+  }
+  
+  .login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .login-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-box input {
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-box button {
+    padding: 15px;
+    background-color: #A4DF9E;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-box button:hover {
+    background-color: #8cd488;
+  }
+  
+  .login-box a {
+    margin-top: 15px;
+    text-align: center;
+    color: #2d6a4f;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    margin-top: 15px;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* ✅ Responsive media query */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .quote h1 {
+      font-size: 1.5rem;
+    }
+  
+    .quote p {
+      font-size: 0.9rem;
+    }
+  
+    .login-box {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .login-box input, .login-box button {
+      font-size: 14px;
+    }
+  }
